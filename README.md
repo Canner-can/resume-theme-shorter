@@ -1,10 +1,10 @@
-# resume-theme-flat
+# resume-theme-shorter
 
-resume from JSONresume the flat, original repo 
+resume from JSONresume theme shorter , original repo 
 
-https://github.com/erming/jsonresume-theme-flat
+https://github.com/danialt/jsonresume-theme-shorter
 
-[Theme Preview](http://themes.jsonresume.org/flat)
+[Theme Preview](http://canner-can.github.io/resume-theme-shorter)
 
 ## License
 
