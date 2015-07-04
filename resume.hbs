@@ -19,36 +19,35 @@
 	
 	<div id="resume">
 
-	{{#resume.basics}}
 	<section class="heading">
 		<header>
-			<h1>{{name}}</h1>
+			<h1>{{resume.basic.sname}}</h1>
 			<div class="contact">
-				{{#if email}}
+				{{#if resume.basic.semail}}
 				<span class="detail">
-					<a href="mailto:{{email}}">{{email}}</a>
+					<a href="mailto:{{resume.basic.semail}}">{{resume.basic.semail}}</a>
 				</span>
 				{{/if}}
-				{{#if phone}}
+				{{#if resume.basic.sphone}}
 				<span class="detail">
-					{{phone}}
+					{{resume.basic.sphone}}
 				</span>
 				{{/if}}
-				{{#if website}}
+				{{#if resume.basic.swebsite}}
 				<span class="detail">
-					<a href="{{website}}">{{website}}</a>
+					<a href="{{resume.basic.swebsite}}">{{resume.basic.swebsite}}</a>
 				</span>
 				{{/if}}
 			</div>
 		</header>
 
 
-		{{#if summary}}
-		<p>{{summary}}</p>
+		{{#if resume.basic.summary}}
+		<p>{{resume.basic.summary}}</p>
 		{{/if}}
 
-		{{#if profiles.length}}
-			{{#each profiles}}
+		{{#if resume.basic.profiles.length}}
+			{{#each resume.basic.profiles}}
 			<div class="profile">
 				{{#if network}}
 				<strong class="network">
@@ -69,7 +68,6 @@
 		{{/if}}
 
 	</section>
-	{{/resume.basics}}
 
 	{{#if resume.skills.length}}
 	<section id="skills">
@@ -84,7 +82,7 @@
 			{{#if keywords.length}}
 			<div class="keywords">
 				{{#each keywords}}
-					{{.}}{{#if @last}}{{else}},{{/if}}
+					{{this}}{{#if @last}}{{else}},{{/if}}
 				{{/each}}
 			</div>
 			{{/if}}
@@ -132,7 +130,7 @@
 			{{#if highlights.length}}
 			<ul class="highlights">
 				{{#each highlights}}
-				<li>{{.}}</li>
+				<li>{{this}}</li>
 				{{/each}}
 			</ul>
 			{{/if}}
